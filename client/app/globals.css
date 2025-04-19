@@ -1,0 +1,278 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 47% 15%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 45 80% 54%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 45 80% 54%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222 47% 11%;
+
+    --radius: 0.75rem;
+
+    --font-poppins: "Poppins", sans-serif;
+    --font-inter: "Inter", sans-serif;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 98%;
+
+    --card: 222 47% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 47% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 45 80% 54%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 45 80% 54%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 45 80% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-cream font-inter text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-poppins font-bold;
+  }
+}
+
+/* Glassmorphism */
+.glass {
+  @apply bg-white/30 backdrop-blur-md border border-white/20 shadow-glass;
+}
+
+.glass-dark {
+  @apply bg-navy-800/30 backdrop-blur-md border border-white/10 shadow-glass;
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/30 shadow-glass transition-all duration-300;
+}
+
+.glass-card:hover {
+  @apply bg-white/80 shadow-glass-lg;
+}
+
+.glass-card-dark {
+  @apply bg-navy-800/50 backdrop-blur-md border border-white/10 shadow-glass transition-all duration-300;
+}
+
+.glass-card-dark:hover {
+  @apply bg-navy-800/60 shadow-glass-lg;
+}
+
+/* Floating Label Input */
+.floating-label {
+  @apply relative;
+}
+
+.floating-label input,
+.floating-label textarea {
+  @apply pt-6 pb-2 px-4 w-full rounded-md border border-gray-300 focus:border-gold focus:ring-1 focus:ring-gold transition-all duration-200;
+}
+
+.floating-label label {
+  @apply absolute left-4 top-4 text-gray-500 transition-all duration-200 pointer-events-none;
+}
+
+.floating-label input:focus ~ label,
+.floating-label input:not(:placeholder-shown) ~ label,
+.floating-label textarea:focus ~ label,
+.floating-label textarea:not(:placeholder-shown) ~ label {
+  @apply transform -translate-y-3 scale-75 text-gold;
+}
+
+/* Animated Gradient Background */
+.animated-gradient {
+  background: linear-gradient(-45deg, #0a2342, #1a3a5f, #335f97, #0a2342);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Glowing Button */
+.btn-glow {
+  @apply relative overflow-hidden transition-all duration-300;
+}
+
+.btn-glow::after {
+  content: "";
+  @apply absolute inset-0 rounded-md opacity-0 transition-opacity duration-300 bg-gold/20;
+}
+
+.btn-glow:hover::after {
+  @apply opacity-100;
+}
+
+.btn-glow:active::after {
+  @apply opacity-70;
+}
+
+/* Animated Card */
+.animated-card {
+  @apply transition-all duration-300 hover:shadow-glass-xl hover:-translate-y-1;
+}
+
+/* Animated Profile Card */
+.profile-card {
+  @apply transition-all duration-300 overflow-hidden;
+}
+
+.profile-card:hover {
+  @apply shadow-glass-xl transform -translate-y-1;
+}
+
+.profile-card .profile-content {
+  @apply transition-all duration-300;
+}
+
+.profile-card:hover .profile-content {
+  @apply transform scale-105;
+}
+
+/* Animated Feed Card */
+.feed-card {
+  @apply transition-all duration-300;
+}
+
+.feed-card:hover {
+  @apply shadow-glass-lg;
+}
+
+/* Animated Section Transitions */
+.section-transition {
+  @apply transition-all duration-500 ease-in-out;
+}
+
+.section-transition:hover {
+  @apply transform scale-[1.01];
+}
+
+/* Shimmer Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+}
+
+/* Pulsing Animation */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+/* Staggered Animation for Lists */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: stagger-fade-in 0.5s ease forwards;
+}
+
+@keyframes stagger-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-delay-1 {
+  animation-delay: 0.1s;
+}
+.stagger-delay-2 {
+  animation-delay: 0.2s;
+}
+.stagger-delay-3 {
+  animation-delay: 0.3s;
+}
+.stagger-delay-4 {
+  animation-delay: 0.4s;
+}
+.stagger-delay-5 {
+  animation-delay: 0.5s;
+}
+.stagger-delay-6 {
+  animation-delay: 0.6s;
+}
+.stagger-delay-7 {
+  animation-delay: 0.7s;
+}
+.stagger-delay-8 {
+  animation-delay: 0.8s;
+}

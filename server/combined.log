@@ -1,0 +1,36 @@
+2025-04-18T10:25:11.619Z info: All users retrieved
+2025-04-18T10:36:29.043Z error: Error during registration for fareha@example.com: Cast to Number failed for value "btcs2021xx" (type string) at path "rollNo" for model "User"
+2025-04-18T10:38:10.075Z error: Error during registration for fareha@example.com: profilePhotoUrl is not defined
+2025-04-18T10:38:38.579Z error: Error during registration for fareha@example.com: profilePhotoUrl is not defined
+2025-04-18T10:41:28.699Z info: New user registered: fareha@example.com
+2025-04-18T10:54:50.044Z info: All users retrieved
+2025-04-18T11:05:24.806Z info: User Login successfully
+2025-04-18T13:32:41.530Z info: New user registered: ayaanmalik@example.com
+2025-04-18T13:32:54.660Z info: All users retrieved
+2025-04-18T14:12:10.494Z warn: Get attempt failed: User doesn't exist with Roll No: search
+2025-04-18T14:13:14.489Z warn: Get attempt failed: User doesn't exist with Roll No: search
+2025-04-18T14:15:39.069Z warn: Get attempt failed: User doesn't exist with Roll No: search
+2025-04-18T14:18:22.295Z info: All users retrieved
+2025-04-18T14:27:07.472Z warn: Get attempt failed: User doesn't exist with Roll No: filter
+2025-04-18T14:29:20.212Z warn: Get attempt failed: User doesn't exist with Roll No: filter
+2025-04-18T18:34:15.753Z info: New user registered: farehaaslam57@gmail.com
+2025-04-18T18:34:24.209Z info: All users retrieved
+2025-04-18T18:50:09.132Z info: User Login successfully
+2025-04-19T12:25:28.921Z info: All users retrieved
+2025-04-19T16:14:20.292Z info: All users retrieved
+2025-04-19T16:26:05.726Z info: User Login successfully
+2025-04-19T16:31:46.948Z error: Error during login: ${err.message}
+2025-04-19T16:34:50.773Z info: User Login successfully
+2025-04-19T16:37:19.937Z warn: Signup failed: Roll number already exists - 23bcs054
+2025-04-19T16:37:29.802Z info: New user registered: fareha123@gmail.com
+2025-04-19T16:37:39.262Z info: All users retrieved
+2025-04-19T16:40:12.588Z error: Error during registration for pokemon@123: User validation failed: email: Invalid Email
+2025-04-19T16:40:16.398Z error: Error during registration for pokemon@123: User validation failed: email: Invalid Email
+2025-04-19T16:40:39.706Z info: New user registered: pokemon@gmail.com
+2025-04-19T16:41:36.007Z info: All users retrieved
+2025-04-19T16:43:31.195Z info: User Login successfully
+2025-04-19T16:45:40.550Z info: User Login successfully
+2025-04-19T17:26:32.606Z warn: Failed login attempt: User doesn't exist
+2025-04-19T17:27:02.117Z warn: Failed login attempt: User doesn't exist
+2025-04-19T17:27:04.247Z warn: Failed login attempt: User doesn't exist
+2025-04-19T17:28:20.886Z info: User Login successfully
