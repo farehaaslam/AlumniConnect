@@ -125,28 +125,3 @@ router.get('/alumni/:id', getAlumniById)
 Log Out
 router.get('/alumni/logout', logoutUser)
 
-## Landing page
-![localhost_3002_](https://github.com/user-attachments/assets/79af1ac9-1500-46c4-8275-4978cb8b83bd)
-
-## Login Page
-![image](https://github.com/user-attachments/assets/fcddb4f7-5d81-4477-b571-e39c3f1236ea)
-
-## Sign UP page
-![localhost_3002_signup](https://github.com/user-attachments/assets/6b04fde8-806a-4d5e-ade2-156f32c2c582)
-
-## Dashboard
-![localhost_3002_dashboard](https://github.com/user-attachments/assets/f7d978a0-5ce9-4c1d-a7af-5e467b5a8755)
-
-##post
-![localhost_3002_dashboard (1)](https://github.com/user-attachments/assets/33b211a7-25dc-41fc-8347-51a088a76d7d)
-
-
-
-
-
-
-
-
-
-
-
